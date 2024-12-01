@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.align-center{
+    display: flex;
+    align-items: center;
+
+}
+.gap-8{
+    gap: 8px;
+}
+
+.gap-24{
+    gap: 24px;
+}
+
+div.header{
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.header div.item {
+    height: fit-content;
+}
+
+div.header ul{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+div.header ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+div.search{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    padding-right: 80px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+div.search input{
+    border: none;
+    outline: none;
+}
+
+div.content h1{
+    font-size: 50px;
+    font-style: italic;
+}
+
+div.content p{
+    font-size: 17px;
+    color: gray;
+}
+
+div.btngroup button.xti{
+    margin: 15px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgb(193, 29, 84);
+    border-radius: 8px ;
+    color: white;
+    background-color: rgb(193, 29, 84);
+    font-size: 16px;
+}
+
+div.btngroup button.yti{
+    margin: 15px;
+    width: 200px;
+    height: 50px;
+    border:1px solid rgb(193, 29, 84);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+div.footer img.rti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer img.uti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer img.dti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer img.gti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer{
+    display: flex;
+    flex-direction: row;
+}
+
+div.vti img.fti{
+    width: 350px;
+    height: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1000px;
+    margin-top: -400px;
+}
+
+div.userinfo{
+    width: 200px;
+    height: 120px;
+    border: 1px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -350px;
+}
+
+div.vti{
+    display: flex;
+    flex-direction: column;
+}
+
+div.userinfo p.tti{
+    text-align: center;
+    font-size: 20px;
+}
+
+p.zti{
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+}
+
+p.oti{
+    color: gray;
+    font-size: 14px;
+    display: flex;
+}
+
+div.person1{
+    display: flex;
+}
+
+div.person2{
+    display: flex;
+}

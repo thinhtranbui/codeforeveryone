@@ -1,0 +1,18 @@
+h1{
+    color: chartreuse;
+    text-align: center;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 200;
+    height: 150;
+}
+li{
+    color: aqua;
+}
+li.in{
+    color: rgb(152, 58, 159);
+}

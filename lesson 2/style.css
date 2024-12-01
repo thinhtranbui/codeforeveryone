@@ -1,0 +1,15 @@
+p {
+    color: aqua ;
+    }
+    
+p#dev {
+    color: rgb(171, 68, 16);
+    }
+h1{
+    text-align: center;
+    color: chartreuse;
+    font-style: italic;
+}
+a{
+    text-decoration: none;
+}

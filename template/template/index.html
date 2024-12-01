@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="./scss/style.css" rel="stylesheet">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        
+        $(function () {
+            // Owl Carousel
+            var owl = $(".owl-carousel-product");
+            owl.owlCarousel({
+                loop: true,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 8000,
+                slideSpeed: 400,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 2,
+                        margin: 15,
+                        nav: false
+                    },
+                    1025: {
+                        items: 3,
+                        margin: 37,
+                    },
+                }
+            });
+        });
+        $(function () {
+            // Owl Carousel
+            var owl = $(".owl-carousel-cate");
+            owl.owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                pagination: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                slideSpeed: 400,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 2,
+                        margin: 7,
+                    },
+                    768: {
+                        items: 3,
+                        margin: 7,
+                    },
+                }
+            });
+        });
+
+        $(function () {
+            // Owl Carousel
+            var owl = $(".owl-carousel-support");
+            owl.owlCarousel({
+                loop: false,
+                nav: true,
+                dots: false,
+                pagination: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                slideSpeed: 400,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 0,
+                    },
+                    568: {
+                        items: 2,
+                        margin: 0,
+                    },
+                    991: {
+                        items: 3,
+                        margin: 0,
+                    },
+                }
+            });
+        });
+
+        $(function () {
+            // Owl Carousel
+            var owl = $(".owl-carousel-socila-media");
+            owl.owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                pagination: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                slideSpeed: 400,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 2,
+                        margin: 15,
+                    },
+                    667: {
+                        items: 3,
+                        margin: 15,
+                    },
+                    1000: {
+                        items: 4,
+                        margin: 13,
+                    },
+                }
+            });
+        });
+
+        $(function () {
+            // Owl Carousel
+            var owl = $(".owl-location-items");
+            owl.owlCarousel({
+                loop: true,
+                nav: true,
+                dots: false,
+                pagination: false,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                slideSpeed: 400,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 8,
+                    },
+                    767: {
+                        items: 2,
+                        margin: 8,
+                    },
+                    991: {
+                        items: 3,
+                        margin: 8,
+                    },
+                }
+            });
+        });
+        $(".carousel-slide-customs").on("touchstart", function(event){
+            var xClick = event.originalEvent.touches[0].pageX;
+            $(this).one("touchmove", function(event){
+                var xMove = event.originalEvent.touches[0].pageX;
+                if( Math.floor(xClick - xMove) > 5 ){
+                    $(this).carousel('next');
+                }
+                else if( Math.floor(xClick - xMove) < -5 ){
+                    $(this).carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend", function(){
+                $(this).off("touchmove");
+            });
+        });
+    </script>
+    <title>RENE</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top bg-main">
+            <div class="container top text-center">
+                <p>ENJOY AN EXTRA 20% OFF SELECT SALES STYLES <b>READ MORE</b></p>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="container-fluid d-flex">
+                <div class="isMobile">
+                    <div class="left-header-mobile">
+                        <div class="dropdown">
+                            <button class="btn btn-none" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="./assets/img/sidebar.svg" width="32px">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <ul>
+                                    <li><a href="#">New in</a></li>
+                                    <li><a href="#">Clothing</a></li>
+                                    <li><a href="#">Shoes and Accessories</a></li>
+                                    <li><a href="#">Gift Card</a></li>
+                                    <li><a href="#">Sales</a></li>
+                                    <li><a href="#">Blogs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-none p-0"><img class="mr-2" src="assets/img/search.svg"
+                                alt="Search" /></button>
+                    </div>
+                </div>
+                <ul class="d-flex left-menu">
+                    <li><a href="#">Country</a></li>
+                    <li><a href="#">Customer Care</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+                <div class="logo">
+                    <a href="#"> <img src="assets/img/logo.svg" alt="logo" /></a>
+                </div>
+                <ul class="d-flex right-menu">
+                    <li><a href="#"><img src="assets/img/heart.svg" alt="wishlist" /> Wishlist</a></li>
+                    <li><a href="#"><img src="assets/img/login.svg" alt="Sign in" /> Sign in</a></li>
+                    <li class="shopping-cart-dropdown nav-item dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true">
+                            <span class="shopping-cart">
+                                <img src="assets/img/cart.svg" alt="Shopping cart" />
+                                <span class="amount">4</span>
+                            </span>
+                            <span>
+                                Shopping cart
+                            </span>
+                        </a>
+
+                        <form class="dropdown-menu" aria-labelledby="dropdownShoppingcart">
+                            <div class="dropdown--top">
+                                <h4>Shopping Cart (0)</h4>
+                            </div>
+                            <div class="dropdown--bottom">
+                                <div class="no-product text-center">
+                                    <img src="./assets/img/shopping-cart.png" />
+                                    <p>Your shopping cart is empty</p>
+                                    <button class="btn btn-primary hover-text">Shopping now<svg width="20" height="15"
+                                            viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                fill="white"></path>
+                                        </svg></button>
+                                </div>
+                                <div class="products-cart">
+                                    <ul class="cart-list">
+                                        <li>
+                                            <div class="product-item">
+                                                <div class="product-item--left">
+                                                    <img src="./assets/img/product1.png" />
+                                                </div>
+                                                <div class="product-item--right">
+                                                    <div class="info">
+                                                        <p class="name-product">
+                                                            <b><a href="#">Skinny Jeans</a></b>
+                                                        </p>
+                                                        <div class="select-option">
+                                                            <select class="custom-select color">
+                                                                <option selected>Black</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p class="icon">
+                                                                <svg width="3" height="4" viewBox="0 0 3 4" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <rect y="0.5" width="3" height="3" rx="1.5"
+                                                                        fill="#C4C4C4" />
+                                                                </svg>
+                                                            </p>
+                                                            <select class="custom-select size">
+                                                                <option selected>S</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <div class="quantity-title">Qty:</div>
+                                                            <div class="quantity-amount">
+                                                                <input type="button" value="-" class="minus">
+                                                                <input type="number" step="1" min="1" max=""
+                                                                    name="quantity" value="1" title="Qty"
+                                                                    class="input-text qty text" size="4"
+                                                                    pattern="[0-9]*" inputmode="numeric">
+                                                                <input type="button" value="+" class="plus">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cost">
+                                                        <p>24,900 MMK</p>
+                                                        <button class="btn-none cursor-pointer">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M6.75 7.5V13.5C6.75 13.6989 6.82902 13.8897 6.96967 14.0303C7.11032 14.171 7.30109 14.25 7.5 14.25C7.69891 14.25 7.88968 14.171 8.03033 14.0303C8.17098 13.8897 8.25 13.6989 8.25 13.5V7.5C8.25 7.30109 8.17098 7.11032 8.03033 6.96967C7.88968 6.82902 7.69891 6.75 7.5 6.75C7.30109 6.75 7.11032 6.82902 6.96967 6.96967C6.82902 7.11032 6.75 7.30109 6.75 7.5Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M10.5 6.75C10.6989 6.75 10.8897 6.82902 11.0303 6.96967C11.171 7.11032 11.25 7.30109 11.25 7.5V13.5C11.25 13.6989 11.171 13.8897 11.0303 14.0303C10.8897 14.171 10.6989 14.25 10.5 14.25C10.3011 14.25 10.1103 14.171 9.96967 14.0303C9.82902 13.8897 9.75 13.6989 9.75 13.5V7.5C9.75 7.30109 9.82902 7.11032 9.96967 6.96967C10.1103 6.82902 10.3011 6.75 10.5 6.75Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M12 3H16.5C16.6989 3 16.8897 3.07902 17.0303 3.21967C17.171 3.36032 17.25 3.55109 17.25 3.75C17.25 3.94891 17.171 4.13968 17.0303 4.28033C16.8897 4.42098 16.6989 4.5 16.5 4.5H15.6705L14.5425 14.664C14.4406 15.5813 14.004 16.4288 13.3163 17.0443C12.6285 17.6598 11.738 18.0001 10.815 18H7.185C6.26205 18.0001 5.37148 17.6598 4.68373 17.0443C3.99599 16.4288 3.55939 15.5813 3.4575 14.664L2.328 4.5H1.5C1.30109 4.5 1.11032 4.42098 0.96967 4.28033C0.829018 4.13968 0.75 3.94891 0.75 3.75C0.75 3.55109 0.829018 3.36032 0.96967 3.21967C1.11032 3.07902 1.30109 3 1.5 3H6C6 2.20435 6.31607 1.44129 6.87868 0.87868C7.44129 0.31607 8.20435 0 9 0C9.79565 0 10.5587 0.31607 11.1213 0.87868C11.6839 1.44129 12 2.20435 12 3V3ZM9 1.5C8.60218 1.5 8.22064 1.65804 7.93934 1.93934C7.65804 2.22064 7.5 2.60218 7.5 3H10.5C10.5 2.60218 10.342 2.22064 10.0607 1.93934C9.77936 1.65804 9.39782 1.5 9 1.5V1.5ZM3.8385 4.5L4.9485 14.499C5.00977 15.0493 5.27179 15.5576 5.68442 15.9268C6.09706 16.296 6.63132 16.5001 7.185 16.5H10.815C11.3684 16.4997 11.9023 16.2955 12.3146 15.9263C12.727 15.5572 12.9888 15.049 13.05 14.499L14.163 4.5H3.84H3.8385Z"
+                                                                    fill="#4F4F4F" />
+                                                            </svg>
+
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="product-item">
+                                                <div class="product-item--left">
+                                                    <img src="./assets/img/product1.png" />
+                                                </div>
+                                                <div class="product-item--right">
+                                                    <div class="info">
+                                                        <p class="name-product">
+                                                            <b><a href="#">Skinny Jeans</a></b>
+                                                        </p>
+                                                        <div class="select-option">
+                                                            <select class="custom-select color">
+                                                                <option selected>Black</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p class="icon">
+                                                                <svg width="3" height="4" viewBox="0 0 3 4" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <rect y="0.5" width="3" height="3" rx="1.5"
+                                                                        fill="#C4C4C4" />
+                                                                </svg>
+                                                            </p>
+                                                            <select class="custom-select size">
+                                                                <option selected>S</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <div class="quantity-title">Qty:</div>
+                                                            <div class="quantity-amount">
+                                                                <input type="button" value="-" class="minus">
+                                                                <input type="number" step="1" min="1" max=""
+                                                                    name="quantity" value="1" title="Qty"
+                                                                    class="input-text qty text" size="4"
+                                                                    pattern="[0-9]*" inputmode="numeric">
+                                                                <input type="button" value="+" class="plus">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cost">
+                                                        <p>24,900 MMK</p>
+                                                        <button class="btn-none cursor-pointer">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M6.75 7.5V13.5C6.75 13.6989 6.82902 13.8897 6.96967 14.0303C7.11032 14.171 7.30109 14.25 7.5 14.25C7.69891 14.25 7.88968 14.171 8.03033 14.0303C8.17098 13.8897 8.25 13.6989 8.25 13.5V7.5C8.25 7.30109 8.17098 7.11032 8.03033 6.96967C7.88968 6.82902 7.69891 6.75 7.5 6.75C7.30109 6.75 7.11032 6.82902 6.96967 6.96967C6.82902 7.11032 6.75 7.30109 6.75 7.5Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M10.5 6.75C10.6989 6.75 10.8897 6.82902 11.0303 6.96967C11.171 7.11032 11.25 7.30109 11.25 7.5V13.5C11.25 13.6989 11.171 13.8897 11.0303 14.0303C10.8897 14.171 10.6989 14.25 10.5 14.25C10.3011 14.25 10.1103 14.171 9.96967 14.0303C9.82902 13.8897 9.75 13.6989 9.75 13.5V7.5C9.75 7.30109 9.82902 7.11032 9.96967 6.96967C10.1103 6.82902 10.3011 6.75 10.5 6.75Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M12 3H16.5C16.6989 3 16.8897 3.07902 17.0303 3.21967C17.171 3.36032 17.25 3.55109 17.25 3.75C17.25 3.94891 17.171 4.13968 17.0303 4.28033C16.8897 4.42098 16.6989 4.5 16.5 4.5H15.6705L14.5425 14.664C14.4406 15.5813 14.004 16.4288 13.3163 17.0443C12.6285 17.6598 11.738 18.0001 10.815 18H7.185C6.26205 18.0001 5.37148 17.6598 4.68373 17.0443C3.99599 16.4288 3.55939 15.5813 3.4575 14.664L2.328 4.5H1.5C1.30109 4.5 1.11032 4.42098 0.96967 4.28033C0.829018 4.13968 0.75 3.94891 0.75 3.75C0.75 3.55109 0.829018 3.36032 0.96967 3.21967C1.11032 3.07902 1.30109 3 1.5 3H6C6 2.20435 6.31607 1.44129 6.87868 0.87868C7.44129 0.31607 8.20435 0 9 0C9.79565 0 10.5587 0.31607 11.1213 0.87868C11.6839 1.44129 12 2.20435 12 3V3ZM9 1.5C8.60218 1.5 8.22064 1.65804 7.93934 1.93934C7.65804 2.22064 7.5 2.60218 7.5 3H10.5C10.5 2.60218 10.342 2.22064 10.0607 1.93934C9.77936 1.65804 9.39782 1.5 9 1.5V1.5ZM3.8385 4.5L4.9485 14.499C5.00977 15.0493 5.27179 15.5576 5.68442 15.9268C6.09706 16.296 6.63132 16.5001 7.185 16.5H10.815C11.3684 16.4997 11.9023 16.2955 12.3146 15.9263C12.727 15.5572 12.9888 15.049 13.05 14.499L14.163 4.5H3.84H3.8385Z"
+                                                                    fill="#4F4F4F" />
+                                                            </svg>
+
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="product-item">
+                                                <div class="product-item--left">
+                                                    <img src="./assets/img/product1.png" />
+                                                </div>
+                                                <div class="product-item--right">
+                                                    <div class="info">
+                                                        <p class="name-product">
+                                                            <b><a href="#">Skinny Jeans</a></b>
+                                                        </p>
+                                                        <div class="select-option">
+                                                            <select class="custom-select color">
+                                                                <option selected>Black</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p class="icon">
+                                                                <svg width="3" height="4" viewBox="0 0 3 4" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <rect y="0.5" width="3" height="3" rx="1.5"
+                                                                        fill="#C4C4C4" />
+                                                                </svg>
+                                                            </p>
+                                                            <select class="custom-select size">
+                                                                <option selected>S</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <div class="quantity-title">Qty:</div>
+                                                            <div class="quantity-amount">
+                                                                <input type="button" value="-" class="minus">
+                                                                <input type="number" step="1" min="1" max=""
+                                                                    name="quantity" value="1" title="Qty"
+                                                                    class="input-text qty text" size="4"
+                                                                    pattern="[0-9]*" inputmode="numeric">
+                                                                <input type="button" value="+" class="plus">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cost">
+                                                        <p>24,900 MMK</p>
+                                                        <button class="btn-none cursor-pointer">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M6.75 7.5V13.5C6.75 13.6989 6.82902 13.8897 6.96967 14.0303C7.11032 14.171 7.30109 14.25 7.5 14.25C7.69891 14.25 7.88968 14.171 8.03033 14.0303C8.17098 13.8897 8.25 13.6989 8.25 13.5V7.5C8.25 7.30109 8.17098 7.11032 8.03033 6.96967C7.88968 6.82902 7.69891 6.75 7.5 6.75C7.30109 6.75 7.11032 6.82902 6.96967 6.96967C6.82902 7.11032 6.75 7.30109 6.75 7.5Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M10.5 6.75C10.6989 6.75 10.8897 6.82902 11.0303 6.96967C11.171 7.11032 11.25 7.30109 11.25 7.5V13.5C11.25 13.6989 11.171 13.8897 11.0303 14.0303C10.8897 14.171 10.6989 14.25 10.5 14.25C10.3011 14.25 10.1103 14.171 9.96967 14.0303C9.82902 13.8897 9.75 13.6989 9.75 13.5V7.5C9.75 7.30109 9.82902 7.11032 9.96967 6.96967C10.1103 6.82902 10.3011 6.75 10.5 6.75Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M12 3H16.5C16.6989 3 16.8897 3.07902 17.0303 3.21967C17.171 3.36032 17.25 3.55109 17.25 3.75C17.25 3.94891 17.171 4.13968 17.0303 4.28033C16.8897 4.42098 16.6989 4.5 16.5 4.5H15.6705L14.5425 14.664C14.4406 15.5813 14.004 16.4288 13.3163 17.0443C12.6285 17.6598 11.738 18.0001 10.815 18H7.185C6.26205 18.0001 5.37148 17.6598 4.68373 17.0443C3.99599 16.4288 3.55939 15.5813 3.4575 14.664L2.328 4.5H1.5C1.30109 4.5 1.11032 4.42098 0.96967 4.28033C0.829018 4.13968 0.75 3.94891 0.75 3.75C0.75 3.55109 0.829018 3.36032 0.96967 3.21967C1.11032 3.07902 1.30109 3 1.5 3H6C6 2.20435 6.31607 1.44129 6.87868 0.87868C7.44129 0.31607 8.20435 0 9 0C9.79565 0 10.5587 0.31607 11.1213 0.87868C11.6839 1.44129 12 2.20435 12 3V3ZM9 1.5C8.60218 1.5 8.22064 1.65804 7.93934 1.93934C7.65804 2.22064 7.5 2.60218 7.5 3H10.5C10.5 2.60218 10.342 2.22064 10.0607 1.93934C9.77936 1.65804 9.39782 1.5 9 1.5V1.5ZM3.8385 4.5L4.9485 14.499C5.00977 15.0493 5.27179 15.5576 5.68442 15.9268C6.09706 16.296 6.63132 16.5001 7.185 16.5H10.815C11.3684 16.4997 11.9023 16.2955 12.3146 15.9263C12.727 15.5572 12.9888 15.049 13.05 14.499L14.163 4.5H3.84H3.8385Z"
+                                                                    fill="#4F4F4F" />
+                                                            </svg>
+
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="product-item">
+                                                <div class="product-item--left">
+                                                    <img src="./assets/img/product1.png" />
+                                                </div>
+                                                <div class="product-item--right">
+                                                    <div class="info">
+                                                        <p class="name-product">
+                                                            <b><a href="#">Skinny Jeans</a></b>
+                                                        </p>
+                                                        <div class="select-option">
+                                                            <select class="custom-select color">
+                                                                <option selected>Black</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <p class="icon">
+                                                                <svg width="3" height="4" viewBox="0 0 3 4" fill="none"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <rect y="0.5" width="3" height="3" rx="1.5"
+                                                                        fill="#C4C4C4" />
+                                                                </svg>
+                                                            </p>
+                                                            <select class="custom-select size">
+                                                                <option selected>S</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <div class="quantity-title">Qty:</div>
+                                                            <div class="quantity-amount">
+                                                                <input type="button" value="-" class="minus">
+                                                                <input type="number" step="1" min="1" max=""
+                                                                    name="quantity" value="1" title="Qty"
+                                                                    class="input-text qty text" size="4"
+                                                                    pattern="[0-9]*" inputmode="numeric">
+                                                                <input type="button" value="+" class="plus">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cost">
+                                                        <p>24,900 MMK</p>
+                                                        <button class="btn-none cursor-pointer">
+                                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M6.75 7.5V13.5C6.75 13.6989 6.82902 13.8897 6.96967 14.0303C7.11032 14.171 7.30109 14.25 7.5 14.25C7.69891 14.25 7.88968 14.171 8.03033 14.0303C8.17098 13.8897 8.25 13.6989 8.25 13.5V7.5C8.25 7.30109 8.17098 7.11032 8.03033 6.96967C7.88968 6.82902 7.69891 6.75 7.5 6.75C7.30109 6.75 7.11032 6.82902 6.96967 6.96967C6.82902 7.11032 6.75 7.30109 6.75 7.5Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M10.5 6.75C10.6989 6.75 10.8897 6.82902 11.0303 6.96967C11.171 7.11032 11.25 7.30109 11.25 7.5V13.5C11.25 13.6989 11.171 13.8897 11.0303 14.0303C10.8897 14.171 10.6989 14.25 10.5 14.25C10.3011 14.25 10.1103 14.171 9.96967 14.0303C9.82902 13.8897 9.75 13.6989 9.75 13.5V7.5C9.75 7.30109 9.82902 7.11032 9.96967 6.96967C10.1103 6.82902 10.3011 6.75 10.5 6.75Z"
+                                                                    fill="#4F4F4F" />
+                                                                <path
+                                                                    d="M12 3H16.5C16.6989 3 16.8897 3.07902 17.0303 3.21967C17.171 3.36032 17.25 3.55109 17.25 3.75C17.25 3.94891 17.171 4.13968 17.0303 4.28033C16.8897 4.42098 16.6989 4.5 16.5 4.5H15.6705L14.5425 14.664C14.4406 15.5813 14.004 16.4288 13.3163 17.0443C12.6285 17.6598 11.738 18.0001 10.815 18H7.185C6.26205 18.0001 5.37148 17.6598 4.68373 17.0443C3.99599 16.4288 3.55939 15.5813 3.4575 14.664L2.328 4.5H1.5C1.30109 4.5 1.11032 4.42098 0.96967 4.28033C0.829018 4.13968 0.75 3.94891 0.75 3.75C0.75 3.55109 0.829018 3.36032 0.96967 3.21967C1.11032 3.07902 1.30109 3 1.5 3H6C6 2.20435 6.31607 1.44129 6.87868 0.87868C7.44129 0.31607 8.20435 0 9 0C9.79565 0 10.5587 0.31607 11.1213 0.87868C11.6839 1.44129 12 2.20435 12 3V3ZM9 1.5C8.60218 1.5 8.22064 1.65804 7.93934 1.93934C7.65804 2.22064 7.5 2.60218 7.5 3H10.5C10.5 2.60218 10.342 2.22064 10.0607 1.93934C9.77936 1.65804 9.39782 1.5 9 1.5V1.5ZM3.8385 4.5L4.9485 14.499C5.00977 15.0493 5.27179 15.5576 5.68442 15.9268C6.09706 16.296 6.63132 16.5001 7.185 16.5H10.815C11.3684 16.4997 11.9023 16.2955 12.3146 15.9263C12.727 15.5572 12.9888 15.049 13.05 14.499L14.163 4.5H3.84H3.8385Z"
+                                                                    fill="#4F4F4F" />
+                                                            </svg>
+
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between total">
+                                        <p>Order value</p>
+                                        <p>74,700 MMK</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between total-all">
+                                        <p>Total</p>
+                                        <p><b>74,700 MMK</b></p>
+                                    </div>
+                                    <div class="group-button-bottom">
+                                        <button class="btn btn-primary hover-text">Checkout<svg width="20" height="15"
+                                            viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                fill="white"></path>
+                                        </svg></button>
+                                        <button class="btn btn-seondary hover-text hover-btn">Shopping cart<svg width="20" height="15"
+                                            viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                fill="white"></path>
+                                        </svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header-menu container-fluid">
+        <ul class="d-flex align-items-center">
+            <li><a href="#">New in</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Shoes and Accessories</a></li>
+            <li><a href="#">Gift Card</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+        <div class="search-box">
+            <button type="button" class="btn btn-none p-0"><img class="mr-2" src="assets/img/search.svg"
+                    alt="Search" /></button>
+            <input id="search-box" type="text" name="qr" placeholder="Search">
+        </div>
+    </div>
+    <div class="main-content" style="overflow: hidden">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel carousel-slide-customs slide mrb-80 section1" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active">
+                        <img src="./assets/img/slider1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption ">
+                            <button class="btn btn-white hover-text">
+                                <span>Shop Now</span>
+                                <svg width="20" height="15" viewBox="0 0 14 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/slider1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption ">
+                            <button class="btn btn-white hover-text">
+                                <span>Shop Now</span>
+                                <svg width="20" height="15" viewBox="0 0 14 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/slider1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption ">
+                            <button class="btn btn-white hover-text">
+                                <span>Shop Now</span>
+                                <svg width="20" height="15" viewBox="0 0 14 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <button type="button" role="presentation" href="#carouselExampleCaptions" data-slide="prev" class="owl-prev"><span aria-label="Previous" ></span></button>
+                    <button type="button" role="presentation" href="#carouselExampleCaptions" data-slide="next"  class="owl-next"><span aria-label="Next" ></span></button>
+                </div>
+            </div>
+            <div class="section2 mrb-80">
+                <div class="row nav-default">
+                    <div class="col-xl-3 col-md-4 text-center">
+                        <h3 class="title">Trendy Now</h3>
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <a class="nav-link active" id="v-new-arrivals-tab" data-toggle="pill" href="#v-new-arrivals"
+                                role="tab" aria-controls="v-new-arrivals" aria-selected="true">New Arrivals</a>
+                            <a class="nav-link" id="v-best-sellers-tab" data-toggle="pill" href="#v-best-sellers"
+                                role="tab" aria-controls="v-best-sellers" aria-selected="false">Best Sellers</a>
+                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+                                role="tab" aria-controls="v-pills-messages" aria-selected="false">Top Picks</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-md-8">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-new-arrivals" role="tabpanel"
+                                aria-labelledby="v-new-arrivals-tab">
+                                <!-- Swiper -->
+                                <div class="product-slider">
+                                    <div class="owl-carousel owl-theme owl-carousel-product">
+                                        <div class="product">
+                                            <div class="item-image">
+                                                <a href="#">
+                                                    <span class="hover_image animation-zoom">
+                                                        <img width="100%" src="./assets/img/product2.png"
+                                                            class="wp-post-image" alt="">
+                                                    </span>
+                                                    <span class="cover_image">
+                                                        <img width="100%" src="./assets/img/product1.png"
+                                                            class="wp-post-image" alt="">
+                                                    </span>
+                                                </a>
+                                                <div class="button-in-product">
+                                                    <div class="add-to-cart">
+                                                        <a rel="nofollow" href="#" class="button add_to_cart_button">
+                                                            <span class="ftc-tooltip button-tooltip">Select
+                                                                Options</span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist">
+                                                        <a href="#" class="add_to_wishlist wishlist">
+                                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M11.6392 21C11.4785 20.9995 11.3224 20.9458 11.1954 20.8472C7.15012 17.7041 4.36353 14.9976 2.41365 12.3274C-0.0746296 8.9151 -0.642133 5.76473 0.725695 2.9636C1.70064 0.962789 4.50177 -0.674238 7.77582 0.278875C9.33685 0.729777 10.6988 1.69675 11.6392 3.0218C12.5796 1.69675 13.9416 0.729777 15.5026 0.278875C18.7694 -0.659687 21.5778 0.962789 22.5527 2.9636C23.9205 5.76473 23.353 8.9151 20.8648 12.3274C18.9149 14.9976 16.1283 17.7041 12.083 20.8472C11.956 20.9458 11.8 20.9995 11.6392 21ZM5.91325 1.46481C5.13421 1.43449 4.36162 1.61691 3.67841 1.99248C2.99521 2.36805 2.42719 2.92259 2.03532 3.59658C0.907587 5.91025 1.41688 8.48584 3.59231 11.4616C5.90421 14.4436 8.61137 17.0969 11.6392 19.3484C14.6666 17.0991 17.3737 14.4483 19.6861 11.4689C21.8688 8.48584 22.3708 5.91025 21.2431 3.60386C20.5155 2.14872 18.3328 0.991891 15.9028 1.6758C15.1236 1.90608 14.4012 2.29694 13.7822 2.82323C13.1632 3.34953 12.6612 3.99959 12.3086 4.73159C12.2538 4.86503 12.1605 4.97917 12.0407 5.05949C11.9208 5.13982 11.7798 5.1827 11.6356 5.1827C11.4913 5.1827 11.3503 5.13982 11.2305 5.05949C11.1106 4.97917 11.0174 4.86503 10.9626 4.73159C10.6126 3.99776 10.1115 3.34618 9.49208 2.81956C8.87267 2.29294 8.14896 1.90317 7.36839 1.6758C6.89545 1.53844 6.40573 1.46743 5.91325 1.46481Z"
+                                                                    fill="#333333" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-description">
+                                                <div class="categories">
+                                                    <a href="#">JACKET</a>
+                                                </div>
+                                                <h3 class="product_title product-name"><a href="#">Faux suede biker
+                                                        jacket</a></h3>
+                                                <p class="price">24,900 MMK</p>
+                                                <div class="color-variable-wrapper">
+                                                    <div class="color-term white">
+                                                    </div>
+
+                                                    <div class="color-term black active">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <div class="item-image">
+                                                <a href="#">
+                                                    <span class="cover_image ">
+                                                        <img width="100%" src="./assets/img/product2.png"
+                                                            class="wp-post-image" alt="">
+                                                    </span>
+                                                </a>
+                                                <div class="button-in-product">
+                                                    <div class="add-to-cart">
+                                                        <a rel="nofollow" href="#" class="button add_to_cart_button">
+                                                            <span class="ftc-tooltip button-tooltip">Select
+                                                                Options</span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist">
+                                                        <a href="#" class="add_to_wishlist wishlist">
+                                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M11.6392 21C11.4785 20.9995 11.3224 20.9458 11.1954 20.8472C7.15012 17.7041 4.36353 14.9976 2.41365 12.3274C-0.0746296 8.9151 -0.642133 5.76473 0.725695 2.9636C1.70064 0.962789 4.50177 -0.674238 7.77582 0.278875C9.33685 0.729777 10.6988 1.69675 11.6392 3.0218C12.5796 1.69675 13.9416 0.729777 15.5026 0.278875C18.7694 -0.659687 21.5778 0.962789 22.5527 2.9636C23.9205 5.76473 23.353 8.9151 20.8648 12.3274C18.9149 14.9976 16.1283 17.7041 12.083 20.8472C11.956 20.9458 11.8 20.9995 11.6392 21ZM5.91325 1.46481C5.13421 1.43449 4.36162 1.61691 3.67841 1.99248C2.99521 2.36805 2.42719 2.92259 2.03532 3.59658C0.907587 5.91025 1.41688 8.48584 3.59231 11.4616C5.90421 14.4436 8.61137 17.0969 11.6392 19.3484C14.6666 17.0991 17.3737 14.4483 19.6861 11.4689C21.8688 8.48584 22.3708 5.91025 21.2431 3.60386C20.5155 2.14872 18.3328 0.991891 15.9028 1.6758C15.1236 1.90608 14.4012 2.29694 13.7822 2.82323C13.1632 3.34953 12.6612 3.99959 12.3086 4.73159C12.2538 4.86503 12.1605 4.97917 12.0407 5.05949C11.9208 5.13982 11.7798 5.1827 11.6356 5.1827C11.4913 5.1827 11.3503 5.13982 11.2305 5.05949C11.1106 4.97917 11.0174 4.86503 10.9626 4.73159C10.6126 3.99776 10.1115 3.34618 9.49208 2.81956C8.87267 2.29294 8.14896 1.90317 7.36839 1.6758C6.89545 1.53844 6.40573 1.46743 5.91325 1.46481Z"
+                                                                    fill="#333333" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-description">
+                                                <div class="categories">
+                                                    <a href="#">CARDIGAN</a>
+                                                </div>
+                                                <h3 class="product_title product-name"><a href="#">Button down
+                                                        jumper</a></h3>
+                                                <p class="price">24,900 MMK</p>
+                                                <div class="color-variable-wrapper">
+                                                    <div class="color-term pink">
+                                                    </div>
+                                                    <div class="color-term gray">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <div class="item-image">
+                                                <a href="#">
+                                                    <span class="cover_image ">
+                                                        <img width="100%" src="./assets/img/product3.png"
+                                                            class="wp-post-image" alt="">
+                                                    </span>
+                                                </a>
+                                                <div class="button-in-product">
+                                                    <div class="add-to-cart">
+                                                        <a rel="nofollow" href="#" class="button add_to_cart_button">
+                                                            <span class="ftc-tooltip button-tooltip">Select
+                                                                Options</span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist">
+                                                        <a href="#" class="add_to_wishlist wishlist">
+                                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M11.6392 21C11.4785 20.9995 11.3224 20.9458 11.1954 20.8472C7.15012 17.7041 4.36353 14.9976 2.41365 12.3274C-0.0746296 8.9151 -0.642133 5.76473 0.725695 2.9636C1.70064 0.962789 4.50177 -0.674238 7.77582 0.278875C9.33685 0.729777 10.6988 1.69675 11.6392 3.0218C12.5796 1.69675 13.9416 0.729777 15.5026 0.278875C18.7694 -0.659687 21.5778 0.962789 22.5527 2.9636C23.9205 5.76473 23.353 8.9151 20.8648 12.3274C18.9149 14.9976 16.1283 17.7041 12.083 20.8472C11.956 20.9458 11.8 20.9995 11.6392 21ZM5.91325 1.46481C5.13421 1.43449 4.36162 1.61691 3.67841 1.99248C2.99521 2.36805 2.42719 2.92259 2.03532 3.59658C0.907587 5.91025 1.41688 8.48584 3.59231 11.4616C5.90421 14.4436 8.61137 17.0969 11.6392 19.3484C14.6666 17.0991 17.3737 14.4483 19.6861 11.4689C21.8688 8.48584 22.3708 5.91025 21.2431 3.60386C20.5155 2.14872 18.3328 0.991891 15.9028 1.6758C15.1236 1.90608 14.4012 2.29694 13.7822 2.82323C13.1632 3.34953 12.6612 3.99959 12.3086 4.73159C12.2538 4.86503 12.1605 4.97917 12.0407 5.05949C11.9208 5.13982 11.7798 5.1827 11.6356 5.1827C11.4913 5.1827 11.3503 5.13982 11.2305 5.05949C11.1106 4.97917 11.0174 4.86503 10.9626 4.73159C10.6126 3.99776 10.1115 3.34618 9.49208 2.81956C8.87267 2.29294 8.14896 1.90317 7.36839 1.6758C6.89545 1.53844 6.40573 1.46743 5.91325 1.46481Z"
+                                                                    fill="#333333" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-description">
+                                                <div class="categories">
+                                                    <a href="#">SHIRT</a>
+                                                </div>
+                                                <h3 class="product_title product-name"><a href="#">Levi's essential
+                                                        western</a></h3>
+                                                <p class="price">24,900 MMK</p>
+                                                <div class="color-variable-wrapper">
+                                                    <div class="color-term woodland"></div>
+                                                    <div class="color-term red"></div>
+                                                    <div class="color-term black"></div>
+                                                    <div class="more">+2</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <div class="item-image">
+                                                <a href="#">
+                                                    <span class="cover_image ">
+                                                        <img width="100%" src="./assets/img/product1.png"
+                                                            class="wp-post-image" alt="">
+                                                    </span>
+                                                </a>
+                                                <div class="button-in-product">
+                                                    <div class="add-to-cart">
+                                                        <a rel="nofollow" href="#" class="button add_to_cart_button">
+                                                            <span class="ftc-tooltip button-tooltip">Select
+                                                                Options</span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist">
+                                                        <a href="#" class="add_to_wishlist wishlist">
+                                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M11.6392 21C11.4785 20.9995 11.3224 20.9458 11.1954 20.8472C7.15012 17.7041 4.36353 14.9976 2.41365 12.3274C-0.0746296 8.9151 -0.642133 5.76473 0.725695 2.9636C1.70064 0.962789 4.50177 -0.674238 7.77582 0.278875C9.33685 0.729777 10.6988 1.69675 11.6392 3.0218C12.5796 1.69675 13.9416 0.729777 15.5026 0.278875C18.7694 -0.659687 21.5778 0.962789 22.5527 2.9636C23.9205 5.76473 23.353 8.9151 20.8648 12.3274C18.9149 14.9976 16.1283 17.7041 12.083 20.8472C11.956 20.9458 11.8 20.9995 11.6392 21ZM5.91325 1.46481C5.13421 1.43449 4.36162 1.61691 3.67841 1.99248C2.99521 2.36805 2.42719 2.92259 2.03532 3.59658C0.907587 5.91025 1.41688 8.48584 3.59231 11.4616C5.90421 14.4436 8.61137 17.0969 11.6392 19.3484C14.6666 17.0991 17.3737 14.4483 19.6861 11.4689C21.8688 8.48584 22.3708 5.91025 21.2431 3.60386C20.5155 2.14872 18.3328 0.991891 15.9028 1.6758C15.1236 1.90608 14.4012 2.29694 13.7822 2.82323C13.1632 3.34953 12.6612 3.99959 12.3086 4.73159C12.2538 4.86503 12.1605 4.97917 12.0407 5.05949C11.9208 5.13982 11.7798 5.1827 11.6356 5.1827C11.4913 5.1827 11.3503 5.13982 11.2305 5.05949C11.1106 4.97917 11.0174 4.86503 10.9626 4.73159C10.6126 3.99776 10.1115 3.34618 9.49208 2.81956C8.87267 2.29294 8.14896 1.90317 7.36839 1.6758C6.89545 1.53844 6.40573 1.46743 5.91325 1.46481Z"
+                                                                    fill="#333333" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-description">
+                                                <div class="categories">
+                                                    <a href="#">JACKET</a>
+                                                </div>
+                                                <h3 class="product_title product-name"><a href="#">Faux suede biker
+                                                        jacket</a></h3>
+                                                <p class="price">24,900 MMK</p>
+                                                <div class="color-variable-wrapper">
+                                                    <div class="color-term white"></div>
+                                                    <div class="color-term black"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <div class="item-image">
+                                                <a href="#">
+                                                    <span class="cover_image ">
+                                                        <img width="100%" src="./assets/img/product2.png"
+                                                            class="wp-post-image" alt="">
+                                                    </span>
+                                                </a>
+                                                <div class="button-in-product">
+                                                    <div class="add-to-cart">
+                                                        <a rel="nofollow" href="#" class="button add_to_cart_button">
+                                                            <span class="ftc-tooltip button-tooltip">Select
+                                                                Options</span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist">
+                                                        <a href="#" class="add_to_wishlist wishlist">
+                                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M11.6392 21C11.4785 20.9995 11.3224 20.9458 11.1954 20.8472C7.15012 17.7041 4.36353 14.9976 2.41365 12.3274C-0.0746296 8.9151 -0.642133 5.76473 0.725695 2.9636C1.70064 0.962789 4.50177 -0.674238 7.77582 0.278875C9.33685 0.729777 10.6988 1.69675 11.6392 3.0218C12.5796 1.69675 13.9416 0.729777 15.5026 0.278875C18.7694 -0.659687 21.5778 0.962789 22.5527 2.9636C23.9205 5.76473 23.353 8.9151 20.8648 12.3274C18.9149 14.9976 16.1283 17.7041 12.083 20.8472C11.956 20.9458 11.8 20.9995 11.6392 21ZM5.91325 1.46481C5.13421 1.43449 4.36162 1.61691 3.67841 1.99248C2.99521 2.36805 2.42719 2.92259 2.03532 3.59658C0.907587 5.91025 1.41688 8.48584 3.59231 11.4616C5.90421 14.4436 8.61137 17.0969 11.6392 19.3484C14.6666 17.0991 17.3737 14.4483 19.6861 11.4689C21.8688 8.48584 22.3708 5.91025 21.2431 3.60386C20.5155 2.14872 18.3328 0.991891 15.9028 1.6758C15.1236 1.90608 14.4012 2.29694 13.7822 2.82323C13.1632 3.34953 12.6612 3.99959 12.3086 4.73159C12.2538 4.86503 12.1605 4.97917 12.0407 5.05949C11.9208 5.13982 11.7798 5.1827 11.6356 5.1827C11.4913 5.1827 11.3503 5.13982 11.2305 5.05949C11.1106 4.97917 11.0174 4.86503 10.9626 4.73159C10.6126 3.99776 10.1115 3.34618 9.49208 2.81956C8.87267 2.29294 8.14896 1.90317 7.36839 1.6758C6.89545 1.53844 6.40573 1.46743 5.91325 1.46481Z"
+                                                                    fill="#333333" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-description">
+                                                <div class="categories">
+                                                    <a href="#">CARDIGAN</a>
+                                                </div>
+                                                <h3 class="product_title product-name"><a href="#">Button down
+                                                        jumper</a></h3>
+                                                <p class="price">24,900 MMK</p>
+                                                <div class="color-variable-wrapper">
+                                                    <div class="color-term pink"></div>
+                                                    <div class="color-term gray"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product">
+                                            <div class="item-image">
+                                                <a href="#">
+                                                    <span class="cover_image ">
+                                                        <img width="100%" src="./assets/img/product3.png"
+                                                            class="wp-post-image" alt="">
+                                                    </span>
+                                                </a>
+                                                <div class="button-in-product">
+                                                    <div class="add-to-cart">
+                                                        <a rel="nofollow" href="#" class="button add_to_cart_button">
+                                                            <span class="ftc-tooltip button-tooltip">Select
+                                                                Options</span>
+                                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M0 5.00002C0 4.86741 0.0526784 4.74024 0.146447 4.64647C0.240215 4.5527 0.367392 4.50002 0.5 4.50002H12.293L9.146 1.35402C9.05211 1.26013 8.99937 1.1328 8.99937 1.00002C8.99937 0.867245 9.05211 0.739908 9.146 0.646021C9.23989 0.552134 9.36722 0.49939 9.5 0.49939C9.63278 0.49939 9.76011 0.552134 9.854 0.646021L13.854 4.64602C13.9006 4.69247 13.9375 4.74764 13.9627 4.80839C13.9879 4.86913 14.0009 4.93425 14.0009 5.00002C14.0009 5.06579 13.9879 5.13091 13.9627 5.19165C13.9375 5.2524 13.9006 5.30758 13.854 5.35402L9.854 9.35402C9.76011 9.44791 9.63278 9.50065 9.5 9.50065C9.36722 9.50065 9.23989 9.44791 9.146 9.35402C9.05211 9.26013 8.99937 9.1328 8.99937 9.00002C8.99937 8.86725 9.05211 8.73991 9.146 8.64602L12.293 5.50002H0.5C0.367392 5.50002 0.240215 5.44734 0.146447 5.35357C0.0526784 5.25981 0 5.13263 0 5.00002Z"
+                                                                    fill="white" />
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="yith-wcwl-add-to-wishlist add-to-wishlist">
+                                                        <a href="#" class="add_to_wishlist wishlist">
+                                                            <svg width="24" height="21" viewBox="0 0 24 21" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M11.6392 21C11.4785 20.9995 11.3224 20.9458 11.1954 20.8472C7.15012 17.7041 4.36353 14.9976 2.41365 12.3274C-0.0746296 8.9151 -0.642133 5.76473 0.725695 2.9636C1.70064 0.962789 4.50177 -0.674238 7.77582 0.278875C9.33685 0.729777 10.6988 1.69675 11.6392 3.0218C12.5796 1.69675 13.9416 0.729777 15.5026 0.278875C18.7694 -0.659687 21.5778 0.962789 22.5527 2.9636C23.9205 5.76473 23.353 8.9151 20.8648 12.3274C18.9149 14.9976 16.1283 17.7041 12.083 20.8472C11.956 20.9458 11.8 20.9995 11.6392 21ZM5.91325 1.46481C5.13421 1.43449 4.36162 1.61691 3.67841 1.99248C2.99521 2.36805 2.42719 2.92259 2.03532 3.59658C0.907587 5.91025 1.41688 8.48584 3.59231 11.4616C5.90421 14.4436 8.61137 17.0969 11.6392 19.3484C14.6666 17.0991 17.3737 14.4483 19.6861 11.4689C21.8688 8.48584 22.3708 5.91025 21.2431 3.60386C20.5155 2.14872 18.3328 0.991891 15.9028 1.6758C15.1236 1.90608 14.4012 2.29694 13.7822 2.82323C13.1632 3.34953 12.6612 3.99959 12.3086 4.73159C12.2538 4.86503 12.1605 4.97917 12.0407 5.05949C11.9208 5.13982 11.7798 5.1827 11.6356 5.1827C11.4913 5.1827 11.3503 5.13982 11.2305 5.05949C11.1106 4.97917 11.0174 4.86503 10.9626 4.73159C10.6126 3.99776 10.1115 3.34618 9.49208 2.81956C8.87267 2.29294 8.14896 1.90317 7.36839 1.6758C6.89545 1.53844 6.40573 1.46743 5.91325 1.46481Z"
+                                                                    fill="#333333" />
+                                                            </svg>
+
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-description">
+                                                <div class="categories">
+                                                    <a href="#">SHIRT</a>
+                                                </div>
+                                                <h3 class="product_title product-name"><a href="#">Levi's essential
+                                                        western</a></h3>
+                                                <p class="price">24,900 MMK</p>
+                                                <div class="color-variable-wrapper">
+                                                    <div class="color-term woodland"></div>
+                                                    <div class="color-term red"></div>
+                                                    <div class="color-term black"></div>
+                                                    <div class="more">+2</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-best-sellers" role="tabpanel"
+                                aria-labelledby="v-best-sellers-tab">d</div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab">...</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section3 mrb-80 banner">
+                <img src="./assets/img/banner.png" />
+            </div>
+            <div class="section4 mrb-80">
+                <h3 class="title text-center">Let’s find your wear</h3>
+                <div class="category-slider">
+                    <div class="owl-carousel owl-theme owl-carousel-cate">
+                        <div class="animation-zoom item-category">
+                            <img src="./assets/img/cat1.png" />
+                            <h4><a href="#">Casual Wear</a></h4>
+                        </div>
+                        <div class="animation-zoom item-category">
+                            <img src="./assets/img/cat2.png" />
+                            <h4><a href="#">Casual Wear</a></h4>
+                        </div>
+                        <div class="animation-zoom item-category">
+                            <img src="./assets/img/cat3.png" />
+                            <h4><a href="#">Evening Wear</a></h4>
+                        </div>
+                        <div class="animation-zoom item-category">
+                            <img src="./assets/img/cat1.png" />
+                            <h4><a href="#">Casual Wear</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section5 mrb-80">
+                <h3 class="title text-center">Social Media Post</h3>
+                <div class="category-slider">
+                    <div class="owl-carousel owl-theme owl-carousel-socila-media">
+                        <div class="item-socila-media animation-zoom">
+                            <img src="./assets/img/social1.png" />
+                            <h4>
+                                <a href="#">
+                                    <img src="./assets/img/instagram.svg">
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="item-socila-media animation-zoom">
+                            <img src="./assets/img/social2.png" />
+                            <h4>
+                                <a href="#">
+                                    <img src="./assets/img/instagram.svg">
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="item-socila-media animation-zoom">
+                            <img src="./assets/img/social3.png" />
+                            <h4>
+                                <a href="#">
+                                    <img src="./assets/img/instagram.svg">
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="item-socila-media animation-zoom">
+                            <img src="./assets/img/social4.png" />
+                            <h4>
+                                <a href="#">
+                                    <img src="./assets/img/instagram.svg">
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="item-socila-media animation-zoom">
+                            <img src="./assets/img/social3.png" />
+                            <h4>
+                                <a href="#">
+                                    <img src="./assets/img/instagram.svg">
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section6 mrb-80">
+                <div class="location-items isDesktop">
+                    <div class="location-item animation-zoom">
+                        <img src="./assets/img/store1.png" />
+                    </div>
+                    <div class="location-item">
+                        <div>
+                            <h4 class="title">Our Stores</h4>
+                            <a class="text-black" href="#">
+                                <img src="assets/img/address.svg" />
+                                Find location
+                            </a>
+                        </div>
+                    </div>
+                    <div class="location-item animation-zoom">
+                        <img src="./assets/img/store2.png" />
+                    </div>
+                    <div class="location-item animation-zoom">
+                        <img src="./assets/img/store3.png" />
+                    </div>
+                    <div class="location-item animation-zoom">
+                        <img src="./assets/img/store4.png" />
+                    </div>
+                    <div class="location-item animation-zoom">
+                        <img src="./assets/img/store5.png" />
+                    </div>
+                </div>
+                <div class="location-items isMobile">
+                    <div class="our-store">
+                        <h4 class="title">Our Stores</h4>
+                        <a class="text-black" href="#">
+                            <img src="assets/img/address.svg" />
+                            Find location
+                        </a>
+                    </div>
+                    <div class="owl-carousel owl-theme owl-location-items">
+                        <div class="location-item animation-zoom">
+                            <img src="./assets/img/store1.png" />
+                        </div>
+                        <div class="location-item animation-zoom">
+                            <img src="./assets/img/store2.png" />
+                        </div>
+                        <div class="location-item animation-zoom">
+                            <img src="./assets/img/store3.png" />
+                        </div>
+                        <div class="location-item animation-zoom">
+                            <img src="./assets/img/store4.png" />
+                        </div>
+                        <div class="location-item animation-zoom">
+                            <img src="./assets/img/store5.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="owl-carousel owl-theme owl-carousel-support">
+                    <div>
+                        <img src="./assets/img/delivery.svg" />
+                        <h5>Delivery</h5>
+                        <p>Find out the shipping options available for your destination.</p>
+                        <p class="find-more"><b><a href="#">Find out more</a></b></p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/support.svg" />
+
+                        <h5>Support</h5>
+                        <p><svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.9998 26.5H23.8298C4.17976 25.37 1.38976 8.79 0.999759 3.73C0.968334 3.33658 1.01485 2.94082 1.13663 2.56541C1.25842 2.19 1.45309 1.8423 1.70948 1.54225C1.96587 1.2422 2.27894 0.995688 2.63077 0.816839C2.98259 0.637991 3.36625 0.530322 3.75976 0.500001H9.26976C9.67032 0.499613 10.0618 0.619511 10.3934 0.844163C10.725 1.06881 10.9816 1.38787 11.1298 1.76L12.6498 5.5C12.7961 5.86355 12.8324 6.26208 12.7542 6.64609C12.676 7.0301 12.4867 7.38267 12.2098 7.66L10.0798 9.81C10.4125 11.7007 11.3179 13.4437 12.6737 14.803C14.0294 16.1622 15.7699 17.0723 17.6598 17.41L19.8298 15.26C20.1113 14.9862 20.4671 14.8013 20.853 14.7283C21.2389 14.6554 21.6378 14.6977 21.9998 14.85L25.7698 16.36C26.1363 16.5129 26.449 16.7714 26.668 17.1027C26.8871 17.4339 27.0026 17.8229 26.9998 18.22V23.5C26.9998 24.2956 26.6837 25.0587 26.1211 25.6213C25.5585 26.1839 24.7954 26.5 23.9998 26.5ZM3.99976 2.5C3.73454 2.5 3.48019 2.60536 3.29265 2.79289C3.10512 2.98043 2.99976 3.23478 2.99976 3.5V3.58C3.45976 9.5 6.40976 23.5 23.9398 24.5C24.0711 24.5081 24.2028 24.4902 24.3273 24.4473C24.4517 24.4045 24.5665 24.3374 24.6649 24.2501C24.7634 24.1628 24.8437 24.0568 24.9011 23.9384C24.9586 23.82 24.9921 23.6914 24.9998 23.56V18.22L21.2298 16.71L18.3598 19.56L17.8798 19.5C9.17976 18.41 7.99976 9.71 7.99976 9.62L7.93976 9.14L10.7798 6.27L9.27976 2.5H3.99976Z"
+                                    fill="#333333" />
+                            </svg>
+                            (+95)-9_9999999</p>
+                        <p class="find-more"><svg width="28" height="21" viewBox="0 0 28 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M26 0.5H2C1.46957 0.5 0.960859 0.710714 0.585786 1.08579C0.210714 1.46086 0 1.96957 0 2.5V18.5C0 19.0304 0.210714 19.5391 0.585786 19.9142C0.960859 20.2893 1.46957 20.5 2 20.5H26C26.5304 20.5 27.0391 20.2893 27.4142 19.9142C27.7893 19.5391 28 19.0304 28 18.5V2.5C28 1.96957 27.7893 1.46086 27.4142 1.08579C27.0391 0.710714 26.5304 0.5 26 0.5ZM23.8 2.5L14 9.28L4.2 2.5H23.8ZM2 18.5V3.41L13.43 11.32C13.5974 11.4361 13.7963 11.4984 14 11.4984C14.2037 11.4984 14.4026 11.4361 14.57 11.32L26 3.41V18.5H2Z"
+                                    fill="#333333" />
+                            </svg>
+                            <a href="mailto:support@renemattias.com" class="mailto">support@renemattias.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <img src="./assets/img/exchange.svg" />
+                        <h5>Exchange & Returns</h5>
+                        <p>Arrange your return for an Exchange or refund within 14 days using our free collection
+                            service.</p>
+                        <p class="find-more"><b><a href="#">Find out more</a></b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-2 col-f-left">
+                        <div>
+                            <p class="logo-footer"><img src="./assets/img/logo-footer.svg" alt="logo" /></p>
+                            <p><svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.9998 26.5H23.8298C4.17976 25.37 1.38976 8.79 0.999759 3.73C0.968334 3.33658 1.01485 2.94082 1.13663 2.56541C1.25842 2.19 1.45309 1.8423 1.70948 1.54225C1.96587 1.2422 2.27894 0.995688 2.63077 0.816839C2.98259 0.637991 3.36625 0.530322 3.75976 0.500001H9.26976C9.67032 0.499613 10.0618 0.619511 10.3934 0.844163C10.725 1.06881 10.9816 1.38787 11.1298 1.76L12.6498 5.5C12.7961 5.86355 12.8324 6.26208 12.7542 6.64609C12.676 7.0301 12.4867 7.38267 12.2098 7.66L10.0798 9.81C10.4125 11.7007 11.3179 13.4437 12.6737 14.803C14.0294 16.1622 15.7699 17.0723 17.6598 17.41L19.8298 15.26C20.1113 14.9862 20.4671 14.8013 20.853 14.7283C21.2389 14.6554 21.6378 14.6977 21.9998 14.85L25.7698 16.36C26.1363 16.5129 26.449 16.7714 26.668 17.1027C26.8871 17.4339 27.0026 17.8229 26.9998 18.22V23.5C26.9998 24.2956 26.6837 25.0587 26.1211 25.6213C25.5585 26.1839 24.7954 26.5 23.9998 26.5ZM3.99976 2.5C3.73454 2.5 3.48019 2.60536 3.29265 2.79289C3.10512 2.98043 2.99976 3.23478 2.99976 3.5V3.58C3.45976 9.5 6.40976 23.5 23.9398 24.5C24.0711 24.5081 24.2028 24.4902 24.3273 24.4473C24.4517 24.4045 24.5665 24.3374 24.6649 24.2501C24.7634 24.1628 24.8437 24.0568 24.9011 23.9384C24.9586 23.82 24.9921 23.6914 24.9998 23.56V18.22L21.2298 16.71L18.3598 19.56L17.8798 19.5C9.17976 18.41 7.99976 9.71 7.99976 9.62L7.93976 9.14L10.7798 6.27L9.27976 2.5H3.99976Z"
+                                        fill="#333333" />
+                                </svg>
+                                (+95)-9_9999999</p>
+                            <p class="find-more"><svg width="28" height="21" viewBox="0 0 28 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26 0.5H2C1.46957 0.5 0.960859 0.710714 0.585786 1.08579C0.210714 1.46086 0 1.96957 0 2.5V18.5C0 19.0304 0.210714 19.5391 0.585786 19.9142C0.960859 20.2893 1.46957 20.5 2 20.5H26C26.5304 20.5 27.0391 20.2893 27.4142 19.9142C27.7893 19.5391 28 19.0304 28 18.5V2.5C28 1.96957 27.7893 1.46086 27.4142 1.08579C27.0391 0.710714 26.5304 0.5 26 0.5ZM23.8 2.5L14 9.28L4.2 2.5H23.8ZM2 18.5V3.41L13.43 11.32C13.5974 11.4361 13.7963 11.4984 14 11.4984C14.2037 11.4984 14.4026 11.4361 14.57 11.32L26 3.41V18.5H2Z"
+                                        fill="#333333" />
+                                </svg>
+                                <a href="mailto:support@renemattias.com" class="mailto">support@renemattias.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-10">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="link-items">
+                                    <div class="link-item">
+                                        <h4 class="sub-title">Shop</h4>
+                                        <ul>
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">Shoe & Accessories</a></li>
+                                            <li><a href="#">Gift card</a></li>
+                                            <li><a href="#">Trendy now</a></li>
+                                            <li><a href="#">Occasion</a></li>
+                                            <li><a href="#">Sales</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="link-item">
+                                        <h4 class="sub-title">need help</h4>
+                                        <ul>
+                                            <li><a href="#">My account</a></li>
+                                            <li><a href="#">Customer Care</a></li>
+                                            <li><a href="#">Store Location</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Fit & size</a></li>
+                                            <li><a href="#">Check my wallet balance</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="link-item">
+                                        <h4 class="sub-title">Social media</h4>
+                                        <ul>
+                                            <li><a href="#">Facebook</a></li>
+                                            <li><a href="#">Instagram</a></li>
+                                            <li><a href="#">Twitter</a></li>
+                                            <li><a href="#">Messenger</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-f-bottom">
+                                <h4 class="sub-title">SIGN UP FOR THE NEWSLETTERS</h4>
+                                <p>Sign up for our newsletter and get the great deal right in you</p>
+                                <div class="subscrible-box">
+                                    <input type="input" placeholder="Enter email" />
+                                    <button type="button" class="btn btn-third">Subscribe now</button>
+                                </div>
+                                <img src="./assets/img/payment.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Copyright © 2021 <b>RENÉ Mattias</b>. All rights reserved. | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

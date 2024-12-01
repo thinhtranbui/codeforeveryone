@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Our Academy</h1>
+            <nav>
+                <ul>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <div class="course" onclick="enroll('Web Development')">
+                <h3>Web Development</h3>
+                <p>Learn how to build websites and web applications.</p>
+            </div>
+            <div class="course" onclick="enroll('Data Science')">
+                <h3>Data Science</h3>
+                <p>Analyze and visualize data to make informed decisions.</p>
+            </div>
+            <div class="course" onclick="enroll('Graphic Design')">
+                <h3>Graphic Design</h3>
+                <p>Create stunning visuals for web and print.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing high-quality education and training to help you achieve your career goals.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@academy.com">info@academy.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div.container {
+    padding: 18px 0;
+}
+
+div.modal {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #3630325b;
+}
+
+div.contentModal {
+    width: 465px;
+    height: 436px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 36px 40px;
+    box-shadow: #DEE2E6 0px 2px 12px;
+    border-radius: 8px;
+}
+
+button.btnClose {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #E5E5E5;
+    border: none;
+    color: #4F4F4F;
+    float: right;
+    transform: translate(32px, -32px);
+}
+
+div.image {
+    height: 158px;
+    width: 385px;
+    background-color: #E5E5E5;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+div.feedback {
+    text-align: center;
+}
+
+div.feedback p {
+    color: #54595E;
+    opacity: 0.6;
+}
+
+div.feedback p.first {
+    font-size: 20px;
+    color: #54595E;
+    font-weight: bold;
+    opacity: 1;
+    margin-bottom: 8px;
+}
+
+div.formFeedback {
+    margin-top: 24px;
+}
+
+div.formFeedback input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #D1D1D1;
+    outline: none;
+    padding: 14px 16px;
+}
+
+div.formFeedback button {
+    margin-top: 16px;
+    width: 100%;
+    color: #F5F5F5;
+    background-color: #4F4F4F;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+div.clone img.fit{
+    width: 300px;
+    height: 250px;
+    border-radius: 16px;
+    margin-bottom: -50px;
+    margin-left: -40px;
+}
+
+div.clone img{
+    width: 200px;
+    height: 150px;
+    border-radius: 300px;
+    top: -10px;
+    right: -1100px;
+    z-index: -1;
+    position: relative;
+}
+
+div.cheese{
+    width: 1550px;
+    height: 140px;
+    padding: 10px;
+    border: 10px solid rgb(41, 37, 37);
+    margin: 370px 0px;
+    background-color: rgb(41, 37, 37);
+    position: fixed;
+    bottom: -370px;
+}
+
+div.trang{
+    width: 650px;
+    height: 160px;
+    padding: 10px;
+    border: 10px solid beige;
+    margin: 300px 450px;
+    background-color: beige;
+    border-radius: 50px;
+    position: absolute;
+    bottom: -240px;
+}

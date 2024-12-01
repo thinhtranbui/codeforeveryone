@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div.container {
+    padding: 0 130px;
+    margin: auto;
+}
+
+div.menuBar {
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.menuBar div.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+div.menuBar div.logo h1 {
+    font-size: 24px;
+}
+
+div.navaigation {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+}
+
+div.navigation a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+div.menu {
+    display: none;
+}
+
+div.navigation a:hover {
+    color: aqua;
+    opacity: 1;
+}
+
+div.groupBtn {
+    display: flex;
+}
+
+div.groupBtn button {
+    background-color: transparent;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+div.groupBtn button:hover {
+    background-color: #5D50C6;
+    color: #EEEEEE;
+}
+
+div.content h1{
+    font-size: 50px;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+div.content p{
+    font-size: 17px;
+    color: gray;
+    margin-left: 20px;
+}
+
+div.btngroup button.xti{
+    margin: 15px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgb(193, 29, 84);
+    border-radius: 8px ;
+    color: white;
+    background-color: rgb(193, 29, 84);
+    font-size: 16px;
+}
+
+div.btngroup button.yti{
+    margin: 15px;
+    width: 200px;
+    height: 50px;
+    border:1px solid rgb(193, 29, 84);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+div.footer img.rti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer img.uti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer img.dti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer img.gti{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 15px;
+}
+
+div.footer{
+    display: flex;
+    flex-direction: row;
+}
+
+div.wti{
+    margin-left: 20px;
+}
+
+div.qti img.fti{
+    width: 350px;
+    height: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 900px;
+    margin-top: -400px;
+}

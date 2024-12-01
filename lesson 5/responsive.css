@@ -1,0 +1,53 @@
+/* mobile */
+
+@media only screen and (min-width: 463px) and (max-width: 640px) {
+    div.container {
+        padding: 0 15px;
+    }
+    div.navigation {
+        display: none;
+    }
+    div.menu {
+        display: block;
+        position: relative;
+    }
+    div.menu:hover div.navigation {
+        display: block;
+        position: absolute;
+    }
+    div.menu div.navigation {
+        right: 0;
+    }
+    div.groupBtn {
+        display: none;
+    }
+    div.menuBar {
+        flex-direction: row-reverse;
+    }
+
+    div.qti img.fti{
+    width: 350px;
+    height: 500px;
+    border-radius: 8px;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and (min-width: 641px) and (max-width: 780px) {
+    div.container {
+        padding: 0 65px;
+    }
+    div.navigation {
+        display: none;
+    }
+    div.menu {
+        display: block;
+        position: relative;
+    }
+    div.menu:hover div.navigation {
+        display: block;
+        position: absolute;
+    }
+}
